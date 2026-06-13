@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html, body, #root {
+    height: 100%;
+    font-family: 'Geist', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #f5f6f8;
+    color: #111827;
+  }
+}
+
+@layer components {
+  /* Raw log block */
+  .raw-log-block {
+    background: #0e1726;
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: #93c5fd;
+    line-height: 1.75;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+
+  /* Confidence band */
+  .conf-band {
+    height: 5px;
+    border-radius: 3px;
+    background: #e5e7eb;
+    overflow: hidden;
+    margin-top: 6px;
+  }
+
+  /* Sidebar active left bar */
+  .sb-active-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 16px;
+    background: #3b82f6;
+    border-radius: 0 3px 3px 0;
+  }
+
+  /* Live pulse dot */
+  .live-dot {
+    animation: livePulse 2s infinite;
+  }
+
+  @keyframes livePulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "threshold": 0.008001624946364992,
+  "percentile_used": 95,
+  "val_set_size": 11200,
+  "description": "95th percentile of normal-only validation anomaly scores"
+}
